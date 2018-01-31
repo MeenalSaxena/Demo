@@ -6,19 +6,19 @@
         <div class="col-md-3">
                 <!-- Controls -->
                 <div class="controls pull-right">
-                        <a class="left fa fa-chevron-left btn btn-primary" href="#2carousel-example-generic" data-slide="prev"></a>
-                        <a class="right fa fa-chevron-right btn btn-primary" href="#2carousel-example-generic" data-slide="next"></a>
+                        <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
+                        <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
                 </div>
         </div>
-</div>
-
-        <div id="2carousel-example-generic" class="carousel slide  " data-ride="carousel"  >
+    </div>
+    
+        <div id="carousel-example-generic" class="carousel slide  " data-ride="carousel"  >
         <!-- Wrapper for slides -->                               
-        <div ng-controller="mycontrol">
-<div class="carousel-inner">
-    <div ng-class="{item:true, active:$first}" ng-repeat="row in msg">
+        <div ng-controller="myCtrl3">
+    <div class="carousel-inner">
+    <div ng-class="item-active" >
         <div class="row">
-            <div class="col-sm-4" ng-repeat="phone3 in row">                     
+            <div class="col-sm-4" ng-repeat="phone3 in urlLatest">                     
                 <div class="col-item">
                     <div class="photo">
                         <img ng-src="{{phone3.imageUrl}}" class="img-responsive" alt="" style="width:auto; height: 170px" />                              
@@ -27,7 +27,7 @@
         
         
                                     <div class="price col-md-12">
-                                        <h5 class="text-success">{{phone3.name}}{{$index}}</h5>
+                                          <h5 class="text-success" ng-style="text">{{phone3.name}}</h5>
                                         <br>
                                         <!-- <h5 class="price-text-color"><span class="text-muted"> Price</span>$199.99</h5> -->
                                     </div><!--price col-md-12 -->
@@ -68,8 +68,8 @@
             </div>
         </div>
     </div>
-</div>
-
-</div>
+    </div>
+    
+    </div>
                         
-</div>
+    </div>

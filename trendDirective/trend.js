@@ -1,4 +1,4 @@
-angular.module("mymodule").directive("trend", function () {
+angular.module("module").directive("trend", function () {
     return {
         templateUrl: "trendDirective/trend.html",
         scope: {
@@ -9,3 +9,15 @@ angular.module("mymodule").directive("trend", function () {
 });
 
 
+myapp.controller('myCtrl3', function($scope,$rootScope, show) {
+
+    
+    show.getData($scope,2);
+    
+    
+    $scope.text = { "text-align":"center"};
+
+
+   
+   });
+   

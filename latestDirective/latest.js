@@ -1,4 +1,4 @@
-angular.module("mymodule").directive("latest", function () {
+angular.module("module").directive("latest", function () {
     return {
         templateUrl: "latestDirective/latest.html",
         scope: {
@@ -7,3 +7,13 @@ angular.module("mymodule").directive("latest", function () {
         }
     }
 });	
+myapp.controller('myCtrl1', function($scope,$rootScope, show) {
+
+    
+    show.getData($scope,0);
+    $scope.text={"text-align":"center"};
+    
+    
+   
+   });
+   

@@ -1,75 +1,75 @@
 <div class="row">
-    <div class="row">
-            <div class="col-md-9">
-                    <h3>Top Trending Devices<a class="view-all" href="" > view all</a></h3>
-            </div>
-    <div class="col-md-3">
-            <!-- Controls -->
-            <div class="controls pull-right">
-                    <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
-                    <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
-            </div>
-    </div>
-</div>
-
-    <div id="carousel-example-generic" class="carousel slide  " data-ride="carousel"  >
-    <!-- Wrapper for slides -->                               
-    <div ng-controller="mycontrol">
-<div class="carousel-inner">
-<div ng-class="{item:true, active:$first}" ng-repeat="row in msg">
-    <div class="row">
-        <div class="col-sm-4" ng-repeat="phone2 in row">                     
-            <div class="col-item">
-                <div class="photo">
-                    <img ng-src="{{phone2.imageUrl}}" class="img-responsive" alt="" style="width:auto; height: 170px" />                              
-                        <div class="info">
-                            <div class="row">
-    
-    
-                                <div class="price col-md-12">
-                                    <h5 class="text-success">{{phone2.name}}{{$index}}</h5>
-                                    <br>
-                                    <!-- <h5 class="price-text-color"><span class="text-muted"> Price</span>$199.99</h5> -->
-                                </div><!--price col-md-12 -->
-                                
-                                
-                                <div class="rating col-md-6">
-                                    <h5 class="price-text-color">
-                                    <span class="text-info">Price :</span>{{phone2.price}}</h5>
-                                    <br>
-                                </div><!--rating col-md-6-->
-                                
-                                
-                                <div class="rating col-md-6">
-                                    <h5 class="price-text-color">
-                                    <span class="text-info">Reviews :</span>{{phone2.totalReviewsCount}}</h5>
-                                    <br>
-                                </div>
-                            </div><!--row-->
-    
-    
-                            <div class="separator clear-left text-muted">
-                                <p class="btn-add">
-                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                <span class="hidden-sm">{{phone2.posReviewPerc}}% Positive </span>
-                                </p>
-                                <p class="btn-details">
-                                <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                                <span class="hidden-sm">{{phone2.negReviewPerc}}% Nagative</span>
-                                </p>
-                            </div>
-                            
-                        
-                         <div class="clearfix"></div><!-- -->
-    
-                     </div><!--info -->
-                </div><!--photo -->
-            </div><!--col item-->
+        <div class="row">
+                <div class="col-md-9">
+                        <h3>Top Budget Devices<a class="view-all" href="" > view all</a></h3>
+                </div>
+        <div class="col-md-3">
+                <!-- Controls -->
+                <div class="controls pull-right">
+                        <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
+                        <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+                </div>
         </div>
     </div>
-</div>
-</div>
-
-</div>
-                    
-</div>
+    
+        <div id="carousel-example-generic" class="carousel slide  " data-ride="carousel"  >
+        <!-- Wrapper for slides -->                               
+        <div ng-controller="myCtrl2">
+    <div class="carousel-inner">
+    <div ng-class="item-active" >
+        <div class="row">
+            <div class="col-sm-4" ng-repeat="phone2 in urlLatest">                     
+                <div class="col-item">
+                    <div class="photo">
+                        <img ng-src="{{phone2.imageUrl}}" class="img-responsive" alt="" style="width:auto; height: 170px" />                              
+                            <div class="info">
+                                <div class="row">
+        
+        
+                                    <div class="price col-md-12">
+                                        <h5 class="text-success" ng-style="text">{{phone2.name}}</h5>
+                                        <br>
+                                        <!-- <h5 class="price-text-color"><span class="text-muted"> Price</span>$199.99</h5> -->
+                                    </div><!--price col-md-12 -->
+                                    
+                                    
+                                    <div class="rating col-md-6">
+                                        <h5 class="price-text-color">
+                                        <span class="text-info">Price :</span>{{phone2.price}}</h5>
+                                        <br>
+                                    </div><!--rating col-md-6-->
+                                    
+                                    
+                                    <div class="rating col-md-6">
+                                        <h5 class="price-text-color">
+                                        <span class="text-info">Reviews :</span>{{phone2.totalReviewsCount}}</h5>
+                                        <br>
+                                    </div>
+                                </div><!--row-->
+        
+        
+                                <div class="separator clear-left text-muted">
+                                    <p class="btn-add">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    <span class="hidden-sm">{{phone2.posReviewPerc}}% Positive </span>
+                                    </p>
+                                    <p class="btn-details">
+                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                    <span class="hidden-sm">{{phone2.negReviewPerc}}% Nagative</span>
+                                    </p>
+                                </div>
+                                
+                            
+                             <div class="clearfix"></div><!-- -->
+        
+                         </div><!--info -->
+                    </div><!--photo -->
+                </div><!--col item-->
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    </div>
+                        
+    </div>

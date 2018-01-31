@@ -1,14 +1,20 @@
-angular.module("mymodule").directive("budget", function () {
+angular.module("module").directive("budget", function () {
     return {
         templateUrl: "budgetDirective/budget.html",
        
-        scope: {
-            phone2: "=",
-
-        }
+        
     }
 });
 
 
+myapp.controller('myCtrl2', function($scope,$rootScope, show) {
 
+    
+    show.getData($scope,1);
+    
+    
+    $scope.text = { "text-align":"center"};
+   
+   });
+   
 
