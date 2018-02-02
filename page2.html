@@ -19,8 +19,9 @@
 
 </head>
 
-<body>
-<br>
+<body ng-app="">
+
+	<br>
 <div class="container">
 
 	<header class="bg-success" id="header" style="padding: 20px;">
@@ -75,14 +76,14 @@
 
 				<div class="location">
 					<ul class="breadcrumb">
-				  		<li><a href="#">Summary</a></li>
-				  		<li><a href="#">Smart Reviews</a></li>
-				  		<li><a href="#">Technical Specification</a></li>
-				  		<li class="active">Prising</li>
+				  		<li ng-class="{active:tab===1}" ><a href="#" ng-click="tab = tab== 1 ? a : 1">Summary</a></li>
+				  		<li ng-class="{active:tab===2}"><a href="#" ng-click="tab = tab==2 ? a : 2">Smart Reviews</a></li>
+				  		<li ng-class="{active:tab===3}"><a href="#" ng-click="tab = tab==3 ? a : 3">Technical Specification</a></li>
+				  		<li class="active" ng-class="{active:tab===4}" ><a href="#" ng-click="tab = tab==4 ? a : 4">Prising</a></li>
 					</ul> 		
 				</div>
 
-				<div class="product-detail well">
+				<div class="product-detail well" ng-show="tab === 1">
 
 					<div class="product-title">
 						<h3 style="position: relative;">Xiaomi Redmi Note 4  <button style="position: absolute; right: 10px; bottom: 0px;" type="button" class="btn btn-success btn-lg ">Buy</button></h3> <hr>
@@ -213,16 +214,9 @@
 
 <hr>
 
-				<div id="part-2">
+				<div id="part-2" ng-show="tab === 2">
 					
-					<div class="location">
-						<ul class="breadcrumb">
-					  		<li><a href="#">Summary</a></li>
-					  		<li class="active"><a href="#">Smart Reviews</a></li>
-					  		<li><a href="#">Technical Specification</a></li>
-					  		<li>Prising</li>
-						</ul> 		
-					</div>
+				
 
 					<div class="well">
 						<ul class="nav nav-tabs">
@@ -336,17 +330,10 @@
 				</div><!-- Part 2 -->
 
 
-				<div id="part-3">
+				<div id="part-3" ng-show="tab === 3">
 					
 					<div class="well">
-						<div class="location">
-							<ul class="breadcrumb">
-						  		<li><a href="#">Summary</a></li>
-						  		<li><a href="#">Smart Reviews</a></li>
-						  		<li><a href="#">Technical Specification</a></li>
-						  		<li class="active">Prising</li>
-							</ul> 		
-						</div>	<!-- location -->	
+						
 
 <hr>
 
@@ -410,19 +397,10 @@
 				</div><!-- part 3 -->
 
 
-				<div id="part-4">
+				<div id="part-4" ng-show="tab === 4">
 					<div class="well">
 						
-						<div class="location">
-							<ul class="breadcrumb">
-						  		<li><a href="#">Summary</a></li>
-						  		<li><a href="#">Smart Reviews</a></li>
-						  		<li class="active"><a href="#">Technical Specification</a></li>
-						  		<li>Prising</li>
-							</ul> 		
-						</div>
-
-						<table class="table table-bordered table-striped text-">
+					<table class="table table-bordered table-striped text-">
 						    <!-- <thead>
 						      <tr>
 						        <th class="text-center"><span class="caret"> </span> Positive Reviews</th>
@@ -550,7 +528,7 @@
 
 
 </div><!-- container -->
-
+<script src="js/angular.js"></script>
 </body>
 
 </html>
