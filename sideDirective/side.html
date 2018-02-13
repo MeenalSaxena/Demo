@@ -1,5 +1,23 @@
+<div ng-controller="sideController">
 
-<div class="well" ng-controller="sideController">
+<div class="well">
+  <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                  <input type="text" class="  search-query form-control" placeholder="Search" />
+                      <span class="input-group-btn">
+                          <button class="btn btn-success" type="button">
+                            <span class=" glyphicon glyphicon-search"></span>
+                           </button>
+                    </span>
+              </div>
+          </div>
+
+          <div class="checkbox" ng-repeat="name in urlLatest.brands">
+    <label><input type="checkbox" value="">{{name}}</label>
+  </div><!-- check -->
+
+</div><!-- well -->
+<div class="well" >
         <div class="panel-group" id="accordion">
 
           <div class="panel panel-default">
@@ -111,3 +129,4 @@
     </div><!-- well -->
 
     
+</div>
