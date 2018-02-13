@@ -2,7 +2,31 @@
 <div class="well" ng-controller="sideController">
         <div class="panel-group" id="accordion">
 
-            <rating></rating>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+              <h4 class="panel-title">
+                Overall
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                  <!-- ---------------------- -->
+                <ul class="list-group list-unstyled">
+                    <li>
+                        <div class="checkbox" ng-repeat="rating in urlLatest.categoriesToPossibleRatingMap.Overall">
+                                <label><input type="checkbox" value="">
+  
+                                  <stars rate = "{{urlLatest.categoriesToPossibleRatingMap.Overall[$index]}}"></stars>
+                                  
+      
+                              </label>
+                          </div><!-- check -->
+                    </li>
+                </ul>
+                  <!-- ----------------------- -->
+               </div>
+            </div>
+          </div><!-- panel -->
 
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
@@ -36,7 +60,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
               <h4 class="panel-title">
-                Ram
+                RAM
               </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse">
@@ -70,7 +94,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
               <h4 class="panel-title">
-                User Review Count
+                User Review 
               </h4>
             </div>
             <div id="collapse6" class="panel-collapse collapse in">
