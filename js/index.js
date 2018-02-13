@@ -14,7 +14,7 @@ var answer;
     //that.myfun(x);
             that.allData=x;
             
-            $http.get(x.data.requests[i].url).then(function(xx){scp.urlLatest=xx.data;that.latestData=xx.data})
+            $http.get(x.data.requests[i].url).then(function(xx){scp.urlLatest=xx.data;that.latestData=xx.data; console.log(that.latestData)})
             
  });
     }

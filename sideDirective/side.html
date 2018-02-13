@@ -1,0 +1,89 @@
+
+<div class="well" ng-controller="sideController">
+        <div class="panel-group" id="accordion">
+
+            <rating></rating>
+
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+              <h4 class="panel-title">
+                Camera
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+              <div class="panel-body">
+                  <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Camera">
+                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+               </div>
+            </div>
+          </div><!-- panel -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+              <h4 class="panel-title">
+                Battery
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                  <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Battery">
+                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+                </div><!-- check -->
+              </div>
+            </div>
+          </div><!-- panel -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+              <h4 class="panel-title">
+                Ram
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                  <div class="panel-body">
+                      <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Ram">
+                      <label><input type="checkbox" value="">{{sidecamera}}</label>
+                    </div><!-- check -->
+                  </div>
+              </div>
+            </div>
+          </div><!-- panel -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+              <h4 class="panel-title">
+                Memory/Storage
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">
+                  <div class="panel-body">
+                  <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap['Memory/Storage']">
+                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+                </div><!-- check -->
+              </div>
+              </div>
+            </div>
+          </div><!-- panel -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+              <h4 class="panel-title">
+                User Review Count
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse in">
+              <div class="panel-body">
+                  <div class="checkbox" ng-repeat="sidecamera in urlLatest.userReviewCouns">
+                  <label><input type="checkbox" value="">>{{sidecamera}}</label>
+                </div><!-- check -->
+               </div>
+            </div>
+          </div><!-- panel -->
+
+        </div> 
+    
+    </div><!-- well -->
+
+    
