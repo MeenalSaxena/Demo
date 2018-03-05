@@ -101,7 +101,7 @@
               <div class="panel-body">
                   <div class="panel-body">
                   <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap['Memory/Storage']">
-                  <label><input type="checkbox">{{sidecamera}}{{item6}}</label>
+                  <label><input type="checkbox" ng-init= "item7[$index].memory=urlLatest.categoriesToPossibleRatingMap['Memory/Storage'][$index]" ng-model="item7[$index].isSelected">{{sidecamera}}</label>
                 </div><!-- check -->
               </div>
               </div>

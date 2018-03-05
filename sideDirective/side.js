@@ -18,10 +18,11 @@ myapp.controller('sideController', function($scope,$rootScope, show) {
     $scope.item4=[];
     $scope.item5=[];
     $scope.item6=[];
+    $scope.item7=[];
     
     $scope.getValue=function(){
         var arr1=[],arr2=[],arr3=[],arr4=[],arr5=[],arr6=[];
-        
+        var arr7=[];
         
         for(var i=0;i<$scope.item1.length;i++)
         {
@@ -51,14 +52,17 @@ myapp.controller('sideController', function($scope,$rootScope, show) {
             if($scope.item6[i].isSelected){
                 arr6.push($scope.item6[i].review);
             }
+            if($scope.item7[i].isSelected){
+                arr7.push($scope.item7[i].memory);
+            }
           
 
             
         }
         
         
-        console.log("http://movieztalk.com/product/search?brands=["+arr1+"]&categories={Overall:["+arr2+"],Camera:["+arr3+"],Battery:["+arr4+"],Ram:["+arr5+"],userReviewCouns:["+arr6+"]}&searchQuery=test");
-        
+        console.log("http://movieztalk.com/product/search?brands=["+arr1+"]&categories={Overall:["+arr2+"],Camera:["+arr3+"],Battery:["+arr4+"],Ram:["+arr5+"],Memory/Storage:["+arr7+"],userReviewCouns:["+arr6+"]}&searchQuery=test");
+
        
     }
     
