@@ -5,7 +5,7 @@
               <div class="input-group col-md-12">
                   <input type="text" class="  search-query form-control" placeholder="Search" />
                       <span class="input-group-btn">
-                          <button class="btn btn-success" type="button">
+                          <button class="btn btn-success" type="button" ng-click="getValue()">
                             <span class=" glyphicon glyphicon-search"></span>
                            </button>
                     </span>
@@ -13,7 +13,7 @@
           </div>
 
           <div class="checkbox" ng-repeat="name in urlLatest.brands">
-    <label><input type="checkbox" value="">{{name}}</label>
+    <label><input type="checkbox" ng-init="item1[$index].name=urlLatest.brands[$index]" ng-model="item1[$index].isSelected">{{item1[$index].name}}</label>
   </div><!-- check -->
 
 </div><!-- well -->
@@ -32,11 +32,9 @@
                 <ul class="list-group list-unstyled">
                     <li>
                         <div class="checkbox" ng-repeat="rating in urlLatest.categoriesToPossibleRatingMap.Overall">
-                                <label><input type="checkbox" value="">
+                                <label><input type="checkbox" value="" ng-init="item2[$index].rate=urlLatest.categoriesToPossibleRatingMap.Overall[$index]" ng-model="item2[$index].isSelected">
   
-                                  <stars rate = "{{urlLatest.categoriesToPossibleRatingMap.Overall[$index]}}"></stars>
-                                  
-      
+                                  <stars rate = "{{item2[$index].rate}}"></stars>
                               </label>
                           </div><!-- check -->
                     </li>
@@ -55,7 +53,8 @@
             <div id="collapse2" class="panel-collapse collapse in">
               <div class="panel-body">
                   <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Camera">
-                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+                  <label>
+                    <input type="checkbox" ng-init="item3[$index].camera=urlLatest.categoriesToPossibleRatingMap.Camera[$index]" ng-model="item3[$index].isSelected">{{sidecamera}}</label>
                </div>
             </div>
           </div><!-- panel -->
@@ -69,7 +68,7 @@
             <div id="collapse3" class="panel-collapse collapse">
               <div class="panel-body">
                   <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Battery">
-                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+                  <label><input type="checkbox" ng-init="item4[$index].battery=urlLatest.categoriesToPossibleRatingMap.Battery[$index]" ng-model="item4[$index].isSelected">{{sidecamera}}</label>
                 </div><!-- check -->
               </div>
             </div>
@@ -85,7 +84,7 @@
               <div class="panel-body">
                   <div class="panel-body">
                       <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap.Ram">
-                      <label><input type="checkbox" value="">{{sidecamera}}</label>
+                      <label><input type="checkbox" ng-init="item5[$index].ram=urlLatest.categoriesToPossibleRatingMap.Ram[$index]" ng-model="item5[$index].isSelected">{{sidecamera}}</label>
                     </div><!-- check -->
                   </div>
               </div>
@@ -102,7 +101,7 @@
               <div class="panel-body">
                   <div class="panel-body">
                   <div class="checkbox" ng-repeat="sidecamera in urlLatest.categoriesToPossibleRatingMap['Memory/Storage']">
-                  <label><input type="checkbox" value="">{{sidecamera}}</label>
+                  <label><input type="checkbox">{{sidecamera}}{{item6}}</label>
                 </div><!-- check -->
               </div>
               </div>
@@ -118,7 +117,7 @@
             <div id="collapse6" class="panel-collapse collapse in">
               <div class="panel-body">
                   <div class="checkbox" ng-repeat="sidecamera in urlLatest.userReviewCouns">
-                  <label><input type="checkbox" value="">>{{sidecamera}}</label>
+                  <label><input type="checkbox" ng-init="item6[$index].review= urlLatest.userReviewCouns[$index]" ng-model="item6[$index].isSelected">>{{sidecamera}}</label>
                 </div><!-- check -->
                </div>
             </div>
@@ -129,4 +128,5 @@
     </div><!-- well -->
 
     
+</div>
 </div>
