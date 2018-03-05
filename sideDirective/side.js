@@ -20,42 +20,45 @@ myapp.controller('sideController', function($scope,$rootScope, show) {
     $scope.item6=[];
     
     $scope.getValue=function(){
-        var arr=[];
+        var arr1=[],arr2=[],arr3=[],arr4=[],arr5=[],arr6=[];
+        
         
         for(var i=0;i<$scope.item1.length;i++)
         {
             if($scope.item1[i].isSelected){
-                arr.push("Name:--"+$scope.item1[i].name);
+                arr1.push($scope.item1[i].name);
             }
         }
 
         for(var i=0;i<$scope.item2.length;i++)
         {
             if($scope.item2[i].isSelected){
-                arr.push("Rating:--"+$scope.item2[i].rate);
+                arr2.push($scope.item2[i].rate);
             }
 
             if($scope.item3[i].isSelected){
-                arr.push("Camera:--"+$scope.item3[i].camera);
+                arr3.push($scope.item3[i].camera);
             }
             
             if($scope.item4[i].isSelected){
-                arr.push("Battery:--"+$scope.item4[i].battery);
+                arr4.push($scope.item4[i].battery);
             }
             
 
             if($scope.item5[i].isSelected){
-                arr.push("Ram:--"+$scope.item5[i].ram);
+                arr5.push($scope.item5[i].ram);
             }
             if($scope.item6[i].isSelected){
-                arr.push("Review:--"+$scope.item6[i].review);
+                arr6.push($scope.item6[i].review);
             }
+          
 
-            
             
         }
-
-        console.log(arr);
+        
+        
+        console.log("http://movieztalk.com/product/search?brands=["+arr1+"]&categories={Overall:["+arr2+"],Camera:["+arr3+"],Battery:["+arr4+"],Ram:["+arr5+"],userReviewCouns:["+arr6+"]}&searchQuery=test");
+        
        
     }
     
